@@ -1,0 +1,70 @@
+!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Studypoint</title>
+  <link rel="stylesheet" href="project.css">
+ 
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <h1 class="logo">Studypoint</h1>
+
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Courses</a>
+      <a href="#">Tutors</a>
+      <a href="#">Contact</a>
+    </nav>
+
+    <div class="auth">
+      <a href="#" onclick="openLogin()"class="login">Login</a>
+      <button onclick="openRegister()"class="register">Register</button>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+
+    <div class="search-box">
+      <input type="text" placeholder="Search for courses">
+    </div>
+
+    <h2>Explore What Professionals Like You Are Learning The Most</h2>
+
+    <button class="cta-btn">Visit Courses</button>
+
+  </section>
+
+
+<!--Login POPUP-->
+<div id="loginPopup" class="popup">
+    <div class="popup-box">
+        <span class="close" onclick="closePopup()">&times;</span>
+        <h2>Login</h2>
+        <input type="text" placeholder="Email"><br><br>
+        <input type="password" placeholder="password"><br><br>
+        <button class="submit-btn">Login</button>
+    </div>
+</div>
+
+<!--Register Popup-->
+ <div id="registerPopup" class="popup">
+    <div class="popup-box">
+        <span class="close" onclick="closePopup()">&times;</span>
+        <h2>Register</h2>
+        <input type="text" placeholder="Name"><br><br>
+        <input type="email" placeholder="Email"><br><br>
+        <input type="password" placeholder="password"><br><br>
+        <button class="submit-btn">Register</button>
+    </div>
+</div>
+</body>
+ <script src="project.js"></script>
+</html>
+
+
