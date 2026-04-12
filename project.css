@@ -16,12 +16,34 @@ body {
   align-items: center;
   padding: 15px 50px;
   background: white;
+  gap: 20px;
+}
+.sidebar {
+  position: fixed;
+  top: 60px; /* 👈 ye add karo */
+  left: -250px;
+  width: 250px;
+  height: calc(100% - 60px);
+  background: #1C8C84;
+  transition: 0.3s;
+  z-index: 1000;
+} 
+.sidebar a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  margin: 10px 0;
 }
 
 .logo {
   color: #1C8C84;
 }
-
+/* Menu icon */
+.menu-icon {
+  font-size: 26px;
+  cursor: pointer;
+  color: #1C8C84;
+}
 nav a {
   margin: 0 15px;
   text-decoration: none;
