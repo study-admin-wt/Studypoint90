@@ -160,3 +160,32 @@ nav a {
             background: #0F766E;
         }
 }
+.subjects {
+  padding: 40px 20px;
+  background-color: #f5f6fa;
+}
+
+.subject-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 20px;
+  max-width: 900px;
+  margin: auto;
+}
+
+.subject-box {
+  background: white;
+  padding: 30px;
+  text-align: center;
+  font-weight: bold;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.subject-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+  color: #4CAF50;
+}
