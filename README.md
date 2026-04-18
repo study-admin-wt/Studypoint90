@@ -1,5 +1,5 @@
 # Studypoint
-
+https://grys6.github.io/Studypoint/
 StudyPoint – Smart Study Planner Website
 Targeted Users:
 School & college students
