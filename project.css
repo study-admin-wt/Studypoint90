@@ -36,7 +36,8 @@ body {
 }
 
 .logo {
-  color: #1C8C84;
+  color: #1a7670;
+  font-size: 50px;
 }
 /* Menu icon */
 .menu-icon {
@@ -54,6 +55,7 @@ nav a {
   display: flex;
   align-items: center;
   gap: 10px;
+  margin-left: auto;
 }
 
 .login {
@@ -74,7 +76,7 @@ nav a {
 .hero {
   text-align: center;
   padding: 50px;
-  background: linear-gradient(135deg, #1c8c84, #5cc3b8);
+  background: linear-gradient(135deg, #9dfff8, #5cc3b8);
   color: white;
 }
 
@@ -123,6 +125,7 @@ nav a {
         width: 300px;
         padding: 25px;
         border-radius: 10px;
+        border: 2px solid whitesmoke;
         position: fixed;
         top: 50%;
         left: 50%;
@@ -161,7 +164,10 @@ nav a {
             background: #0F766E;
         }
 
-/* Section */
+        .subjects h2 {
+         text-align: center;
+         margin-bottom: 25px; 
+}
 .subjects {
   padding: 40px 200px;
   background-color: #f5f6fa;
