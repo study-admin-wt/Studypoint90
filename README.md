@@ -4,15 +4,15 @@ StudyPoint – Smart Study Planner Website
 Targeted Users:
 School & college students
 Competitive exam aspirants
-Students who want to manage study time, tasks, and attendance effectively
 
-Team Members & Roles:
 
-Rushikesh Salvi – Frontend Developer & UI Designer
+Team Members :
 
-Shailesh – Backend Developer
+Rushikesh Salvi 
 
-Govind – Project Manager & Tester
+Shailesh
+
+Govind 
 
 Project Description:
 StudyPoint is a smart study planner website designed to help students manage their academic life
