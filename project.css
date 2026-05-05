@@ -249,7 +249,7 @@ nav a {
   }
 
   .auth {
-    display: none; /* login/register hide */
+    display: flex; /* login/register hide */
   }
 
   .menu-icon {
