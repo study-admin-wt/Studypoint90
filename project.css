@@ -23,9 +23,9 @@ body {
   position: fixed;
   top: 60px; 
   left: -250px;
-  width: 250px;
+  width: 180px;
   height: calc(100% - 60px);
-  background: #1C8C84;
+  background: #44cdc3;
   transition: 0.3s;
   z-index: 1000;
    transition: left 0.4s ease;
