@@ -1,28 +1,36 @@
-let isOpen = false;
-function openLogin() {
-  document.getElementById("loginPopup").style.display = "block";
-  document.getElementById("registerPopup").style.display = "none";
-}
-
-function openRegister() {
-  document.getElementById("registerPopup").style.display = "block";
-  document.getElementById("loginPopup").style.display = "none";
-}
-
-function closePopup() {
-  document.getElementById("loginPopup").style.display = "none";
-  document.getElementById("registerPopup").style.display = "none";
-}
+// Sidebar and Popups
 function openMenu() {
-  let sidebar = document.getElementById("sidebar");
+    document.getElementById("sidebar").style.width = "250px";
+}
+function openLogin() {
+    document.getElementById("loginPopup").style.display = "block";
+}
+function openRegister() {
+    document.getElementById("registerPopup").style.display = "block";
+}
+function closePopup() {
+    document.getElementById("loginPopup").style.display = "none";
+    document.getElementById("registerPopup").style.display = "none";
+}
 
-  if (!sidebar) return; // 👈 safety
+// Slider Logic
+let currentPosition = 0;
 
-  if (isOpen) {
-    sidebar.style.left = "-250px";
-    isOpen = false;
-  } else {
-    sidebar.style.left = "0";
-    isOpen = true;
-  }
+function moveSlider(direction) {
+    const track = document.getElementById('javaSlider');
+    const cards = document.querySelectorAll('.slider-card');
+    const cardWidth = cards[0].offsetWidth + 15; // Width + gap
+    const visibleWidth = document.querySelector('.slider-wrapper').offsetWidth;
+    const totalWidth = track.scrollWidth;
+
+    currentPosition += (direction * cardWidth);
+
+    // Clamp values so it doesn't slide into empty space
+    if (currentPosition > 0) {
+        currentPosition = 0;
+    } else if (Math.abs(currentPosition) > (totalWidth - visibleWidth)) {
+        currentPosition = -(totalWidth - visibleWidth);
+    }
+
+    track.style.transform = `translateX(${currentPosition}px)`;
 }
