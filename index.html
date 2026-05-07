@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,90 +7,103 @@
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
   <title>Studypoint</title>
   <link rel="stylesheet" href="project.css">
- 
 </head>
 <body>
 
   <!-- Navbar -->
   <header class="navbar">
-          <div class="menu-icon" onclick="openMenu()">☰</div>
-    
-
-
+    <div class="menu-icon" onclick="openMenu()">☰</div>
     <div class="auth">
-      <a href="#" onclick="openLogin()"class="login">Login</a>
-      <button onclick="openRegister()"class="register">Register</button>
+      <a href="#" onclick="openLogin()" class="login">Login</a>
+      <button onclick="openRegister()" class="register">Register</button>
     </div>
   </header>
+
   <div id="sidebar" class="sidebar">
-  <a href="#">Home</a>
-  <a href="#">About</a>
-  <a href="#">Courses</a>
-  <a href="/Studypoint/batch_2/fy/s2/subject/dbms_t/introduction">Tutors</a>
-  <a href="#">Contact</a>
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Courses</a>
+    <a href="/Studypoint/batch_2/fy/s2/subject/dbms_t/introduction">Tutors</a>
+    <a href="#">Contact</a>
   </div>
 
   <!-- Hero Section -->
   <section class="hero">
     <h1 class="logo">Studypoint</h1>
-
     <div class="search-box">
       <input type="text" placeholder="Search for courses">
     </div>
-
     <h2>Explore What Professionals Like You Are Learning The Most</h2>
-
-
-
   </section>
-<!-- Subjects Section -->
-<section class="subjects">
-  <h2> Subjects</h2>
 
-  <div class="subject-container">
-    <div class="subject-box">HTML</div>
-    <div class="subject-box">CSS</div>
-    <div class="subject-box">JavaScript</div>
-    <div class="subject-box">DBMS</div>
-    <div class="subject-box">Java</div>
-    <div class="subject-box">MATHS</div>
-  </div>
-</section>
-<br>
-<br>
-<section class="subjects">
-  <h2>INTERNALS</h2>
-
-  <div class="subject-container">
-    <a href="/Studypoint/batch_2/fy/s2/test/Javainternal"><div class="subject-box">JAVA</div></a>
-  </div>
-</section>
-
-
-<!--Login POPUP-->
-<div id="loginPopup" class="popup">
-    <div class="popup-box">
-        <span class="close" onclick="closePopup()">&times;</span>
-        <h2>Login</h2>
-        <input type="text" placeholder="Email"><br><br>
-        <input type="password" placeholder="password"><br><br>
-        <button class="submit-btn">Login</button>
+  <!-- Subjects Section -->
+  <section class="subjects">
+    <h2>Subjects</h2>
+    <div class="subject-container">
+      <div class="subject-box">HTML</div>
+      <div class="subject-box">CSS</div>
+      <div class="subject-box">JavaScript</div>
+      <div class="subject-box">DBMS</div>
+      <div class="subject-box">Java</div>
+      <div class="subject-box">MATHS</div>
     </div>
-</div>
+  </section>
 
-<!--Register Popup-->
- <div id="registerPopup" class="popup">
-    <div class="popup-box">
-        <span class="close" onclick="closePopup()">&times;</span>
-        <h2>Register</h2>
-        <input type="text" placeholder="Name"><br><br>
-        <input type="email" placeholder="Email"><br><br>
-        <input type="password" placeholder="password"><br><br>
-        <button class="submit-btn">Register</button>
+  <br><br>
+
+  <!-- Java Resources Slider Section -->
+  <section class="subjects">
+    <h2>JAVA RESOURCES</h2>
+    <div class="slider-container">
+      <button class="slider-btn prev" onclick="moveSlider(-1)">❮</button>
+      
+      <div class="slider-wrapper">
+        <div class="slider-track" id="javaSlider">
+          <a href="/Studypoint/batch_2/fy/s2/test/Javainternal" class="slider-card">
+            <div class="subject-box">Internals</div>
+          </a>
+          <a href="#" class="slider-card">
+            <div class="subject-box">Java Notes</div>
+          </a>
+          <a href="#" class="slider-card">
+            <div class="subject-box">Programming Hub</div>
+          </a>
+          <a href="#" class="slider-card">
+            <div class="subject-box">Question Bank</div>
+          </a>
+          <a href="#" class="slider-card">
+            <div class="subject-box">Lab Manual</div>
+          </a>
+        </div>
+      </div>
+
+      <button class="slider-btn next" onclick="moveSlider(1)">❯</button>
     </div>
-</div>
+  </section>
+
+  <!--Login POPUP-->
+  <div id="loginPopup" class="popup">
+      <div class="popup-box">
+          <span class="close" onclick="closePopup()">&times;</span>
+          <h2>Login</h2>
+          <input type="text" placeholder="Email"><br><br>
+          <input type="password" placeholder="password"><br><br>
+          <button class="submit-btn">Login</button>
+      </div>
+  </div>
+
+  <!--Register Popup-->
+  <div id="registerPopup" class="popup">
+      <div class="popup-box">
+          <span class="close" onclick="closePopup()">&times;</span>
+          <h2>Register</h2>
+          <input type="text" placeholder="Name"><br><br>
+          <input type="email" placeholder="Email"><br><br>
+          <input type="password" placeholder="password"><br><br>
+          <button class="submit-btn">Register</button>
+      </div>
+  </div>
+
+  <script src="project.js"></script>
 </body>
- <script src="project.js"></script>
 </html>
-
-
