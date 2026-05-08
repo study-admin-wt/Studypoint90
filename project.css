@@ -1,73 +1,274 @@
-/* Container for the Java box and its resources */
-.java-wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    grid-column: 1 / -1; /* Makes it span the width if using grid, or just centers it */
-    width: 100%;
-    margin-top: 20px;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
 }
 
-.java-main {
-    background-color: #f39c12 !important; /* Highlight Java Box */
-    color: white;
-    font-weight: bold;
-    cursor: default;
+body {
+  background: #F0FDFA;
 }
 
-.java-slider-section {
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 50px;
+  padding-left: 10px;
+  background: white;
+  gap: 20px;
+}
+.sidebar {
+  position: fixed;
+  top: 60px; 
+  left: -250px;
+  width: 180px;
+  height: calc(100% - 60px);
+  background: #44cdc3;
+  transition: 0.3s;
+  z-index: 1000;
+   transition: left 0.4s ease;
+   border-top-right-radius: 15px;   /* 👈 round corner */
+  border-bottom-right-radius: 15px;
+
+
+} 
+.sidebar a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  padding: 12px 15px;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+.sidebar a:hover {
+  background: rgba(255,255,255,0.2);
+  padding-left: 20px;
+}
+
+.logo {
+  color: #1a7670;
+  font-size: 50px;
+}
+/* Menu icon */
+.menu-icon {
+  font-size: 26px;
+  cursor: pointer;
+  color: #1C8C84;
+}
+nav a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: black;
+}
+
+.auth {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-left: auto;
+}
+
+.login {
+  color: #1c8c84;
+  text-decoration: none;
+}
+
+.register {
+  background: #1C8C84;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  padding: 50px;
+  background: linear-gradient(135deg, #9dfff8, #5cc3b8);
+  color: white;
+}
+
+/* Search Box */
+.search-box {
+  margin-bottom: 20px;
+}
+
+.search-box input {
+  width: 50%;
+  padding: 12px;
+  border-radius: 20px;
+  border: dashed;
+  outline: none;
+}
+
+/* Heading */
+.hero h2 {
+  margin: 20px 0;
+  font-size: 28px;
+}
+
+/* Button */
+.cta-btn {
+  background: white;
+  color: #1c8c84;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+/* popup background */
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
-    background: #f9f9f9;
+    height: 100;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+    /*popup Box */
+    .popup-box {
+        background: white;
+        width: 300px;
+        padding: 25px;
+        border-radius: 10px;
+        border: 2px solid whitesmoke;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+
+    }
+
+    /*close button */
+    .close {
+        float:right;
+        cursor: pointer;
+        font-size: 20px;
+    }
+
+    /* inputs */
+    .popup-box input {
+        width: 90%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+
+    }
+
+    /* submit button */
+    .submit-btn {
+        background: #1C8C84;
+        color: white;
+        border: none;
+        padding: 10px 15px;
+        border-radius: 6px;
+        cursor: pointer;
+        }
+
+        .submit-btn:hover {
+            background: #0F766E;
+        }
+
+        .subjects h2 {
+         text-align: center;
+         margin-bottom: 25px; 
+}
+.subjects {
+  padding: 40px 200px;
+  background-color: #f5f6fa;
+  text-align: center;
+}
+
+/* Container */
+.subject-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+/* Box */
+.subject-box {
+  background: white;
+  padding: 30px 10px;
+  border-radius: 12px;
+  font-weight: bold;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+/* Hover effect */
+.subject-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+  color: #4CAF50;
+}
+.logo {
+  font-size: 40px;
+  font-weight: 900;
+  color: #1C8C84;
+  letter-spacing: 1px;
+
+  /* subtle effect */
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+
+  transition: 0.3s;
+}
+
+.logo:hover {
+  letter-spacing: 2px;
+  color: #0F766E;
+}
+/* ================= RESPONSIVE ================= */
+
+.menu-icon {
+  display: block;
+   font-size: 26px;
+  cursor: pointer;
+  color: #1C8C84;
+}
+
+@media (max-width: 768px) {
+
+  .navbar {
+    padding: 10px 15px;
+  }
+
+  nav {
+    display: none; /* menu hide */
+  }
+
+  .auth {
+    display: flex; 
+  }
+
+  .menu-icon {
+    display: block; /* ☰ show */
+  }
+
+  .search-box input {
+    width: 90%;
+  }
+
+  .hero h2 {
+    font-size: 20px;
+  }
+
+  .subjects {
     padding: 20px;
-    border-radius: 10px;
-    margin-top: 10px;
-    border: 1px solid #ddd;
-}
+  }
 
-.java-slider-section h3 {
-    text-align: center;
-    font-size: 14px;
-    margin-bottom: 10px;
-    color: #555;
-}
-
-/* Slider Specifics */
-.slider-container {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.slider-wrapper {
-    overflow: hidden;
-    width: 80%; /* Keeps it contained */
-}
-
-.slider-track {
-    display: flex;
-    gap: 15px;
-    transition: transform 0.4s ease-in-out;
-}
-
-.resource-box {
-    padding: 15px;
-    background: white;
-    border: 1px solid #333;
-    border-radius: 5px;
-    text-align: center;
-    min-width: 120px;
-    color: #333;
-}
-
-.slider-btn {
-    background: none;
-    border: none;
-    font-size: 24px;
-    cursor: pointer;
-    padding: 0 10px;
-}
-
-.slider-card {
-    text-decoration: none;
+  .subject-container {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  }
 }
