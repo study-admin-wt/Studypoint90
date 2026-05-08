@@ -272,3 +272,53 @@ nav a {
     grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
   }
 }
+
+/* ================= JAVA PAGE ================= */
+.java-container{
+  display:flex;
+}
+/*sidebar*/
+ .s-sidebar{
+  width:250px;
+  height: 100vh;
+  background: #44cdc3;
+  padding: 20px;
+  position: fixed;
+ }
+
+ /* Sidebar heading */
+ .s-sidebar h2{
+  color: white;
+  margin-bottom: 20px;
+ }
+ /* Sidebar links */
+.s-sidebar a {
+
+  display: block;
+
+  color: white;
+
+  text-decoration: none;
+
+  padding: 10px;
+
+  margin: 10px 0;
+
+  border-radius: 8px;
+
+  transition: 0.3s;
+}
+/* Hover */
+.s-sidebar a:hover {
+
+  background: rgba(255,255,255,0.2);
+}
+
+/* Content */
+.s-content {
+
+  margin-left: 270px;
+
+  padding: 30px;
+}
+
