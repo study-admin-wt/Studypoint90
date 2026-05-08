@@ -1,6 +1,22 @@
 // Sidebar and Popups
+let isOpen = false;
+
 function openMenu() {
-    document.getElementById("sidebar").style.width = "250px";
+
+  let sidebar = document.getElementById("sidebar");
+
+  if (isOpen) {
+
+    sidebar.style.left = "-250px";
+
+    isOpen = false;
+
+  } else {
+
+    sidebar.style.left = "0";
+
+    isOpen = true;
+  }
 }
 function openLogin() {
     document.getElementById("loginPopup").style.display = "block";
