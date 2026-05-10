@@ -186,6 +186,13 @@ nav a {
   background-color: #f5f6fa;
   text-align: center;
 }
+.SUB{
+  text-align: center;
+  color: rgb(170, 150, 150);
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+ 
 
 /* Container */
 .subject-container {
