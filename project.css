@@ -282,7 +282,7 @@ nav a {
 
 /* ================= SUBJECT PAGE ================= */
 
-.java-container{
+.subject-page{
   display: flex;
 }
 
@@ -364,5 +364,139 @@ nav a {
 
     font-size: 15px;
     line-height: 1.5;
+  }
+  
+}
+/* ================= HAMBURGER MENU ================= */
+
+.topic-menu{
+
+  position: fixed;
+
+  top: 15px;
+  left: 12px;
+
+  font-size: 20px;
+
+  background: white;
+
+  color: #1C8C84;
+
+  padding: 5px 12px;
+
+  border-radius: 8px;
+
+  cursor: pointer;
+
+  z-index: 2000;
+
+  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+}
+
+/* ================= SIDEBAR ================= */
+
+.s-sidebar{
+
+  width: 250px;
+
+  min-height: 100vh;
+
+  background: #44cdc3;
+
+  padding: 20px;
+
+  position: fixed;
+
+  top: 0;
+  left: -260px;
+
+  transition: left 0.4s ease;
+
+  overflow-y: auto;
+
+  z-index: 1500;
+}
+
+/* Sidebar active */
+
+.s-sidebar.active{
+
+  left: 0;
+}
+
+/* Sidebar heading */
+
+.s-sidebar h2{
+
+  color: white;
+
+  margin-bottom: 20px;
+
+  margin-top: 50px;
+}
+
+/* Sidebar links */
+
+.s-sidebar a{
+
+  display: block;
+
+  color: white;
+
+  text-decoration: none;
+
+  padding: 10px;
+
+  margin: 10px 0;
+
+  border-radius: 8px;
+
+  transition: 0.3s;
+}
+
+/* Hover */
+
+.s-sidebar a:hover{
+
+  background: rgba(255,255,255,0.2);
+
+  padding-left: 15px;
+}
+
+/* ================= CONTENT ================= */
+
+.s-content{
+
+  width: 100%;
+
+  padding: 80px 20px 20px 20px;
+  margin-left: 0;
+  text-align: left;
+}
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 768px){
+
+  .s-sidebar{
+
+    width: 200px;
+  }
+
+  .s-content{
+
+    padding: 80px 15px 20px 15px;
+  }
+
+  .s-content h1{
+
+    font-size: 28px;
+  }
+
+  .s-content p{
+
+    font-size: 15px;
+
+    line-height: 1.6;
   }
 }

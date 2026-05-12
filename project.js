@@ -50,3 +50,9 @@ function moveSlider(direction) {
 
     track.style.transform = `translateX(${currentPosition}px)`;
 }
+function toggleTopicMenu(){
+
+  let sidebar = document.querySelector(".s-sidebar");
+
+  sidebar.classList.toggle("active");
+}
