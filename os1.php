@@ -2,7 +2,7 @@
 
 $name = $_GET['file'] ?? 'data';
 
-$file = 'os/' . $name . '.json';
+$file = 'https://grys6.github.io/Studypoint/os/' . $name . '.json';
 
 if (!file_exists($file)) {
     die("JSON file not found.");
