@@ -2,7 +2,7 @@
 
 $name = $_GET['file'] ?? 'data';
 
-$file = $name . '.json';
+$file = 'os/' . $name . '.json';
 
 if (!file_exists($file)) {
     die("JSON file not found.");
