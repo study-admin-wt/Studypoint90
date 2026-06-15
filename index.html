@@ -1,132 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1.0">
-  <title>Studypoint</title>
-  <link rel="stylesheet" href="project.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="page-title">Loading...</title>
+    <link rel="stylesheet" href="project.css">
+    <!-- Include Marked.js to automatically convert the Markdown content into HTML -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 </head>
 <body>
-
-  <!-- Navbar -->
-  <header class="navbar">
-    <div class="menu-icon" onclick="openMenu()">☰</div>
-    <div class="auth">
-      <a href="#" onclick="openLogin()" class="login">Login</a>
-      <button onclick="openRegister()" class="register">Register</button>
-    </div>
-  </header>
-
-  <div id="sidebar" class="sidebar">
-    <a href="#">Home</a>
-    <a href="#">About</a>
-    <a href="#">Courses</a>
-    <a href="/Studypoint/batch_2/fy/s2/subject/dbms_t/introduction">Tutors</a>
-    <a href="#">Contact</a>
-  </div>
-
-  <!-- Hero Section -->
-  <section class="hero">
-    <h1 class="logo">Studypoint</h1>
-    <div class="search-box">
-      <input type="text" placeholder="Search for courses">
-    </div>
-    <h2>Explore What Professionals Like You Are Learning The Most</h2>
-  </section>
-
-  <h3 class="SUB">SUBJECT</h3>
-  <div class="subject-container">
-   
-    <a href="html.html" class="subject-box">HTML</a>
-    <a href="css.html" class="subject-box">CSS</a>
-   <a href="JavaScript.html" class="subject-box">JavaScript</a>
-   <a href="DBMS.html" class="subject-box">DBMS</a>
-    <a href="java.html" class="subject-box">Java</a>
-    <a href="Math.html" class="subject-box">Math</a>
-</section>
-<br>
-<br>
-
-
-<!--Login POPUP-->
-<!--
-<div id="loginPopup" class="popup">
-    <div class="popup-box">
-        <span class="close" onclick="closePopup()">&times;</span>
-        <h2>Login</h2>
-        <input type="text" placeholder="Email"><br><br>
-        <input type="password" placeholder="password"><br><br>
-        <button class="submit-btn">Login</button> -->
-
-
-  <!-- Subjects Section 
-  <section class="subjects">
-    <h2>Subjects</h2>
-    <div class="subject-container">
-      <div class="subject-box">HTML</div>
-      <div class="subject-box">CSS</div>
-      <div class="subject-box">JavaScript</div>
-      <div class="subject-box">DBMS</div> -->
-      
-      <!-- Integrated Java Box with Slider 
-      <div class="java-wrapper">
-        <div class="subject-box java-main">Java</div>
-        
-        <div class="java-slider-section">
-          <h3>JAVA RESOURCES</h3>
-          <div class="slider-container">
-            <button class="slider-btn prev" onclick="moveSlider(-1)">❮</button>
-            <div class="slider-wrapper">
-              <div class="slider-track" id="javaSlider">
-                <a href="/Studypoint/batch_2/fy/s2/test/Javainternal" class="slider-card">
-                  <div class="resource-box">Internals</div>
-                </a>
-                <a href="#" class="slider-card">
-                  <div class="resource-box">Java Notes</div>
-                </a>
-                <a href="#" class="slider-card">
-                  <div class="resource-box">Programs</div>
-                </a>
-                <a href="#" class="slider-card">
-                  <div class="resource-box">QB</div>
-                </a>
-                <a href="#" class="slider-card">
-                  <div class="resource-box">Manual</div>
-                </a>
-              </div>
-            </div>
-            <button class="slider-btn next" onclick="moveSlider(1)">❯</button>
-          </div>
+    
+    <div class="topic-menu" onclick="toggleTopicMenu()"> ☰ </div>
+    
+    <div class="subject-page">
+        <div class="s-sidebar">
+            <h2 id="sidebar-subject">DBMS TOPICS</h2>
+            <a href="#">Introduction</a>
+            <a href="#">DBMS Architecture</a>
+            <a href="#">Data Models</a>
+            <a href="#">Database design</a>
+            <a href="#">keys</a>
         </div>
-      </div>
+        
+        <!-- Content -->
+        <div class="s-content">
+            <!-- IDs added here so JavaScript can target them -->
+            <h1 id="note-title">Loading...</h1>
 
-      
+            <div id="note-content">
+                <p>Please wait while we fetch the data...</p>
+            </div>
+        </div>
     </div>
-  </section> -->
-
-  <!--Login POPUP-->
-  <div id="loginPopup" class="popup">
-      <div class="popup-box">
-          <span class="close" onclick="closePopup()">&times;</span>
-          <h2>Login</h2>
-          <input type="text" placeholder="Email"><br><br>
-          <input type="password" placeholder="password"><br><br>
-          <button class="submit-btn">Login</button>
-      </div>
-  </div>
-
-  <!--Register Popup-->
-  <div id="registerPopup" class="popup">
-      <div class="popup-box">
-          <span class="close" onclick="closePopup()">&times;</span>
-          <h2>Register</h2>
-          <input type="text" placeholder="Name"><br><br>
-          <input type="email" placeholder="Email"><br><br>
-          <input type="password" placeholder="password"><br><br>
-          <button class="submit-btn">Register</button>
-      </div>
-  </div>
-
-  <script src="project.js"></script>
+      
+    <script src="project.js"></script>
 </body>
 </html>
